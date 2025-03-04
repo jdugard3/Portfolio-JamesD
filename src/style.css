@@ -753,3 +753,22 @@ body {
 .project-section {
   background-image: var(--section-background-color) !important;
 }
+
+.logo-text {
+  font-size: 1.8em !important;
+  font-weight: 700 !important;
+  padding: 0.5rem 1rem !important;
+  border: 2px solid #6D9886 !important;
+  border-radius: 8px !important;
+  color: #F6F6F6 !important;
+  background: rgba(66, 71, 105, 0.2) !important;
+  transition: all 0.3s ease-in-out !important;
+  font-family: 'Montserrat', sans-serif !important;
+  letter-spacing: 1px !important;
+}
+
+.logo-text:hover {
+  color: #6D9886 !important;
+  background: rgba(66, 71, 105, 0.4) !important;
+  transform: scale(1.05) !important;
+}
