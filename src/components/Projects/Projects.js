@@ -8,6 +8,11 @@ import editor from "../../Assets/Projects/codeEditor.png";
 import chatify from "../../Assets/Projects/chatify.png";
 import suicide from "../../Assets/Projects/suicide.png";
 import bitsOfCode from "../../Assets/Projects/blog.png";
+import connectionWarmerVideo from "../../Assets/Projects/Connection Warmer Vid.mp4";
+
+// Define Loom GIF URLs
+const screenQuestGif = "https://cdn.loom.com/sessions/thumbnails/863ac61b185c48fc8b2b08a95bb2a5ed-9dad633aaeecf3c5-full-play.gif";
+const medicineMindGif = "https://cdn.loom.com/sessions/thumbnails/66b8118e9e9f4413926bfdb2fafe9e47-7682ea9716da39de-full-play.gif";
 
 function Projects() {
   return (
@@ -18,17 +23,50 @@ function Projects() {
           My Recent <strong className="purple">Works </strong>
         </h1>
         <p style={{ color: "white" }}>
-          Here are a few projects I've worked on recently.
+          Check out some of my recent projects on GitHub.
         </p>
         <Row style={{ justifyContent: "center", paddingBottom: "10px" }}>
           <Col md={4} className="project-card">
             <ProjectCard
-              imgPath={chatify}
+              imgPath={editor}
               isBlog={false}
-              title="Chatify"
-              description="Personal Chat Room or Workspace to share resources and hangout with friends build with react.js, Material-UI, and Firebase. Have features which allows user for realtime messaging, image sharing as well as supports reactions on messages."
-              ghLink="https://github.com/soumyajit4419/Chatify"
-              demoLink="https://chatify-49.web.app/"
+              title="Portfolio Website"
+              description="My personal portfolio website built with React.js showcasing my projects, skills, and experience. Features responsive design, smooth animations, and a clean UI with a modern color scheme."
+              ghLink="https://github.com/jdugard3/Portfolio-JamesD"
+              demoLink="https://jdugard3.github.io/Portfolio-JamesD/"
+            />
+          </Col>
+
+          <Col md={4} className="project-card">
+            <ProjectCard
+              imgPath={connectionWarmerVideo}
+              isVideo={true}
+              isBlog={false}
+              title="Connection Warmer"
+              description="Week 4 of the 4 Apps in 4 Weeks challenge. A tool designed to help maintain professional relationships by tracking and scheduling connection touchpoints with your network."
+              ghLink="https://github.com/jdugard3/4AppsIn4Weeks-4"
+            />
+          </Col>
+
+          <Col md={4} className="project-card">
+            <ProjectCard
+              imgPath={screenQuestGif}
+              isBlog={false}
+              title="ScreenQuest"
+              description="Week 3 of the 4 Apps in 4 Weeks challenge. A screen time tracking application that helps users monitor and manage their digital usage habits across devices."
+              ghLink="https://github.com/jdugard3/4appsin4weeks-screenquest"
+              demoLink="https://www.loom.com/share/863ac61b185c48fc8b2b08a95bb2a5ed"
+            />
+          </Col>
+
+          <Col md={4} className="project-card">
+            <ProjectCard
+              imgPath={medicineMindGif}
+              isBlog={false}
+              title="Medicine Minder"
+              description="Week 2 of the 4 Apps in 4 Weeks challenge. A medication tracking application that helps users manage prescriptions, dosages, and schedules with timely reminders."
+              ghLink="https://github.com/jdugard3/4apps4weeks-Medicine-Minder"
+              demoLink="https://www.loom.com/share/66b8118e9e9f4413926bfdb2fafe9e47"
             />
           </Col>
 
@@ -36,21 +74,9 @@ function Projects() {
             <ProjectCard
               imgPath={bitsOfCode}
               isBlog={false}
-              title="Bits-0f-C0de"
-              description="My personal blog page build with Next.js and Tailwind Css which takes the content from makdown files and renders it using Next.js. Supports dark mode and easy to write blogs using markdown."
-              ghLink="https://github.com/soumyajit4419/Bits-0f-C0de"
-              demoLink="https://blogs.soumya-jit.tech/"
-            />
-          </Col>
-
-          <Col md={4} className="project-card">
-            <ProjectCard
-              imgPath={editor}
-              isBlog={false}
-              title="Editor.io"
-              description="Online code and markdown editor build with react.js. Online Editor which supports html, css, and js code with instant view of website. Online markdown editor for building README file which supports GFM, Custom Html tags with toolbar and instant preview.Both the editor supports auto save of work using Local Storage"
-              ghLink="https://github.com/soumyajit4419/Editor.io"
-              demoLink="https://editor.soumya-jit.tech/"              
+              title="4AppsIn4Days Challenge"
+              description="Week 1 of the 4 Apps in 4 Weeks challenge. The initial project that kicked off the series of applications developed in a time-constrained environment to build practical skills."
+              ghLink="https://github.com/jdugard3/4AppsIn4Days-1"
             />
           </Col>
 
@@ -58,33 +84,9 @@ function Projects() {
             <ProjectCard
               imgPath={leaf}
               isBlog={false}
-              title="Plant AI"
-              description="Used the plant disease dataset from Kaggle and trained a image classifer model using 'PyTorch' framework using CNN and Transfer Learning with 38 classes of various plant leaves. The model was successfully able to detect diseased and healthy leaves of 14 unique plants. I was able to achieve an accuracy of 98% by using Resnet34 pretrained model."
-              ghLink="https://github.com/soumyajit4419/Plant_AI"
-              demoLink="https://plant49-ai.herokuapp.com/"
-            />
-          </Col>
-
-          <Col md={4} className="project-card">
-            <ProjectCard
-              imgPath={suicide}
-              isBlog={false}
-              title="Ai For Social Good"
-              description="Using 'Natural Launguage Processing' for the detection of suicide-related posts and user's suicide ideation in cyberspace  and thus helping in sucide prevention."
-              ghLink="https://github.com/soumyajit4419/AI_For_Social_Good"
-              // demoLink="https://www.youtube.com/watch?v=dQw4w9WgXcQ&ab_channel=RickAstley" <--------Please include a demo link here
-            />
-          </Col>
-
-          <Col md={4} className="project-card">
-            <ProjectCard
-              imgPath={emotion}
-              isBlog={false}
-              title="Face Recognition and Emotion Detection"
-              description="Trained a CNN classifier using 'FER-2013 dataset' with Keras and tensorflow backened. The classifier sucessfully predicted the various types of emotions of human. And the highest accuracy obtained with the model was 60.1%.
-              Then used Open-CV to detect the face in an image and then pass the face to the classifer to predict the emotion of a person."
-              ghLink="https://github.com/soumyajit4419/Face_And_Emotion_Detection"
-              // demoLink="https://blogs.soumya-jit.tech/"      <--------Please include a demo link here 
+              title="The Dream Team Project"
+              description="A collaborative project delivering a team-based solution. Features modern design elements and demonstrates effective collaboration in a development environment."
+              ghLink="https://github.com/jdugard3/The-Dream-Team-Project"
             />
           </Col>
         </Row>
