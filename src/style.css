@@ -563,11 +563,55 @@ button:focus {
   box-shadow: 4px 5px 4px 3px rgba(45, 50, 80, 0.137) !important;
   overflow: hidden !important;
   transition: all 0.4s ease 0s !important;
+  position: relative !important;
+}
+
+.tech-icon-name {
+  display: flex !important;
+  flex-direction: column !important;
+  align-items: center !important;
+  justify-content: center !important;
+  height: 100% !important;
+  width: 100% !important;
+  position: relative !important;
+}
+
+.tech-icon-name p {
+  position: absolute !important;
+  top: 50% !important;
+  left: 50% !important;
+  transform: translate(-50%, -50%) !important;
+  font-size: 0.4em !important;
+  background-color: rgba(45, 50, 80, 0.95) !important;
+  color: #F6F6F6 !important;
+  padding: 2px 4px !important;
+  border-radius: 4px !important;
+  opacity: 0 !important;
+  transition: all 0.3s ease-in-out !important;
+  width: auto !important;
+  text-align: center !important;
+  white-space: nowrap !important;
+  pointer-events: none !important;
+  border: 1px solid rgba(109, 152, 134, 0.5) !important;
+  max-width: 90% !important;
+  z-index: 100 !important;
+  letter-spacing: -0.3px !important;
+  font-weight: 600 !important;
+}
+
+.tech-icon-name:hover p {
+  opacity: 1 !important;
 }
 
 @media (max-width: 767px) {
   .tech-icons {
     margin: 10px !important;
+  }
+  
+  .tech-icon-name p {
+    font-size: 0.35em !important;
+    padding: 1px 3px !important;
+    letter-spacing: -0.4px !important;
   }
 }
 
