@@ -2,13 +2,11 @@ import React from "react";
 import { Container, Row, Col } from "react-bootstrap";
 import ProjectCard from "./ProjectCards";
 import Particle from "../Particle";
-import leaf from "../../Assets/Projects/leaf.png";
-import emotion from "../../Assets/Projects/emotion.png";
 import editor from "../../Assets/Projects/codeEditor.png";
-import chatify from "../../Assets/Projects/chatify.png";
-import suicide from "../../Assets/Projects/suicide.png";
-import bitsOfCode from "../../Assets/Projects/blog.png";
 import connectionWarmerVideo from "../../Assets/Projects/Connection Warmer Vid.mp4";
+import hoopLegendSneakers from "../../Assets/Projects/HoopLegendSneakers.png";
+import investmentOpportunityCostCalculator from "../../Assets/Projects/investmentOpportunityCostCalculator.jpeg";
+import chatify from "../../Assets/Projects/chatify.png";
 
 // Define Loom GIF URLs
 const screenQuestGif = "https://cdn.loom.com/sessions/thumbnails/863ac61b185c48fc8b2b08a95bb2a5ed-9dad633aaeecf3c5-full-play.gif";
@@ -34,6 +32,16 @@ function Projects() {
               description="My personal portfolio website built with React.js showcasing my projects, skills, and experience. Features responsive design, smooth animations, and a clean UI with a modern color scheme."
               ghLink="https://github.com/jdugard3/Portfolio-JamesD"
               demoLink="https://jdugard3.github.io/Portfolio-JamesD/"
+            />
+          </Col>
+
+          <Col md={4} className="project-card">
+            <ProjectCard
+              imgPath={chatify}
+              isBlog={false}
+              title="Miami Music Works"
+              description="A fully responsive website for a local music store, showcasing products, services, and location information. Designed with a focus on user experience, brand identity, and driving in-store traffic."
+              demoLink="https://www.miamimusicworks.com/"
             />
           </Col>
 
@@ -72,17 +80,17 @@ function Projects() {
 
           <Col md={4} className="project-card">
             <ProjectCard
-              imgPath={bitsOfCode}
+              imgPath={investmentOpportunityCostCalculator}
               isBlog={false}
-              title="4AppsIn4Days Challenge"
-              description="Week 1 of the 4 Apps in 4 Weeks challenge. The initial project that kicked off the series of applications developed in a time-constrained environment to build practical skills."
+              title="Investment Opportunity Cost Calculator"
+              description="A tool designed to help users calculate the opportunity cost of investing in a particular asset or project."
               ghLink="https://github.com/jdugard3/4AppsIn4Days-1"
             />
           </Col>
 
           <Col md={4} className="project-card">
             <ProjectCard
-              imgPath={leaf}
+              imgPath={hoopLegendSneakers}
               isBlog={false}
               title="The Dream Team Project"
               description="A collaborative project delivering a team-based solution. Features modern design elements and demonstrates effective collaboration in a development environment."

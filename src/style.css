@@ -660,6 +660,29 @@ button:focus {
   justify-content: center;
 }
 
+.resume-container {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.resume-document {
+  max-width: 100%;
+}
+
+.resume-page {
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+  border-radius: 5px;
+  background-color: white;
+}
+
+@media (max-width: 767px) {
+  .resume-page {
+    width: 90% !important;
+    height: auto !important;
+  }
+}
+
 .resume-left {
   padding-right: 80px !important;
 }

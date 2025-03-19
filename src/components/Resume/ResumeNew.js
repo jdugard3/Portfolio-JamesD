@@ -1,8 +1,8 @@
 import React, { useState, useEffect } from "react";
-import { Container, Row } from "react-bootstrap";
+import { Container, Row, Col } from "react-bootstrap";
 import Button from "react-bootstrap/Button";
 import Particle from "../Particle";
-import pdf from "../../Assets/../Assets/Soumyajit_Behera-BIT_MESRA.pdf";
+import pdf from "../../Assets/Resume/JamesDugardResume 2025 Leadership.pdf";
 import { AiOutlineDownload } from "react-icons/ai";
 import { Document, Page, pdfjs } from "react-pdf";
 import "react-pdf/dist/esm/Page/AnnotationLayer.css";
@@ -10,10 +10,38 @@ pdfjs.GlobalWorkerOptions.workerSrc = `//cdnjs.cloudflare.com/ajax/libs/pdf.js/$
 
 function ResumeNew() {
   const [width, setWidth] = useState(1200);
+  const [numPages, setNumPages] = useState(null);
+  const [loading, setLoading] = useState(true);
+  const [error, setError] = useState(false);
 
   useEffect(() => {
-    setWidth(window.innerWidth);
+    const handleResize = () => {
+      setWidth(window.innerWidth);
+    };
+    
+    window.addEventListener("resize", handleResize);
+    handleResize();
+    
+    return () => window.removeEventListener("resize", handleResize);
   }, []);
+
+  function onDocumentLoadSuccess({ numPages }) {
+    setNumPages(numPages);
+    setLoading(false);
+    setError(false);
+  }
+
+  function onDocumentLoadError() {
+    setLoading(false);
+    setError(true);
+  }
+
+  const getScale = () => {
+    if (width > 1200) return 1.6;
+    if (width > 786) return 1.2;
+    if (width > 450) return 0.7;
+    return 0.5;
+  };
 
   return (
     <div>
@@ -27,17 +55,50 @@ function ResumeNew() {
             style={{ maxWidth: "250px" }}
           >
             <AiOutlineDownload />
-            &nbsp;Download CV
+            &nbsp;Download Resume
           </Button>
         </Row>
 
         <Row className="resume">
-          <Document file={pdf} className="d-flex justify-content-center">
-            <Page pageNumber={1} scale={width > 786 ? 1.7 : 0.6} />
-          </Document>
+          <Col md={12} className="resume-container d-flex justify-content-center flex-column align-items-center">
+            {loading && (
+              <div className="text-center mb-3">
+                <p style={{ color: 'white' }}>Loading resume...</p>
+              </div>
+            )}
+            
+            {error && (
+              <div className="text-center mb-3">
+                <p style={{ color: 'white' }}>
+                  Error loading resume. Please try downloading directly instead.
+                </p>
+              </div>
+            )}
+            
+            <Document 
+              file={pdf} 
+              onLoadSuccess={onDocumentLoadSuccess}
+              onLoadError={onDocumentLoadError}
+              className="resume-document"
+            >
+              {Array.from(
+                new Array(numPages),
+                (el, index) => (
+                  <Page
+                    key={`page_${index + 1}`}
+                    pageNumber={index + 1}
+                    scale={getScale()}
+                    className="resume-page mb-4"
+                    renderTextLayer={false}
+                    renderAnnotationLayer={false}
+                  />
+                )
+              )}
+            </Document>
+          </Col>
         </Row>
 
-        <Row style={{ justifyContent: "center", position: "relative" }}>
+        <Row style={{ justifyContent: "center", position: "relative", marginTop: "20px" }}>
           <Button
             variant="primary"
             href={pdf}
@@ -45,7 +106,7 @@ function ResumeNew() {
             style={{ maxWidth: "250px" }}
           >
             <AiOutlineDownload />
-            &nbsp;Download CV
+            &nbsp;Download Resume
           </Button>
         </Row>
       </Container>
