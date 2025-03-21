@@ -6,11 +6,11 @@ import editor from "../../Assets/Projects/codeEditor.png";
 import connectionWarmerVideo from "../../Assets/Projects/Connection Warmer Vid.mp4";
 import hoopLegendSneakers from "../../Assets/Projects/HoopLegendSneakers.png";
 import investmentOpportunityCostCalculator from "../../Assets/Projects/investmentOpportunityCostCalculator.jpeg";
-import chatify from "../../Assets/Projects/chatify.png";
 
 // Define Loom GIF URLs
 const screenQuestGif = "https://cdn.loom.com/sessions/thumbnails/863ac61b185c48fc8b2b08a95bb2a5ed-9dad633aaeecf3c5-full-play.gif";
 const medicineMindGif = "https://cdn.loom.com/sessions/thumbnails/66b8118e9e9f4413926bfdb2fafe9e47-7682ea9716da39de-full-play.gif";
+const miamiMusicWorksGif = "https://cdn.loom.com/sessions/thumbnails/bf27c59fc7f9463dac688aa7c38a7a62-8266c8d883b23c59-full-play.gif?t=4";
 
 function Projects() {
   return (
@@ -37,7 +37,7 @@ function Projects() {
 
           <Col md={4} className="project-card">
             <ProjectCard
-              imgPath={chatify}
+              imgPath={miamiMusicWorksGif}
               isBlog={false}
               title="Miami Music Works"
               description="A fully responsive website for a local music store, showcasing products, services, and location information. Designed with a focus on user experience, brand identity, and driving in-store traffic."
