@@ -11,6 +11,7 @@ const screenQuestGif = "https://cdn.loom.com/sessions/thumbnails/863ac61b185c48f
 const medicineMindGif = "https://cdn.loom.com/sessions/thumbnails/66b8118e9e9f4413926bfdb2fafe9e47-7682ea9716da39de-full-play.gif";
 const miamiMusicWorksGif = "https://cdn.loom.com/sessions/thumbnails/bf27c59fc7f9463dac688aa7c38a7a62-8266c8d883b23c59-full-play.gif?t=4";
 const lukeKostkaGif = "https://cdn.loom.com/sessions/thumbnails/ca3854e5bb7b47b190170796cddcf1c8-909b6e97a2a2108f-full-play.gif";
+const lawFirmWebsiteGif = "https://cdn.loom.com/sessions/thumbnails/8ecc481896614862a2a50fe6130161b4-5c9340e37d4dee92-full-play.gif";
 
 function Projects() {
   return (
@@ -44,6 +45,16 @@ function Projects() {
             />
           </Col>
           
+          <Col md={4} className="project-card">
+            <ProjectCard
+              imgPath={lawFirmWebsiteGif}
+              isBlog={false}
+              title="Law Firm Website"
+              description="A professional website for a law firm featuring modern design and comprehensive service information. Built with responsive design principles to ensure optimal viewing across all devices and platforms."
+              demoLink="https://law-firm-website-1.vercel.app/"
+            />
+          </Col>
+
           <Col md={4} className="project-card">
             <ProjectCard
               imgPath={miamiMusicWorksGif}
