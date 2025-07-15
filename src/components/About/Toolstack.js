@@ -11,10 +11,17 @@ import {
   SiJira,
   SiWindowsterminal
 } from "react-icons/si";
+import { BsCursor } from "react-icons/bs";
 
 function Toolstack() {
   return (
     <Row style={{ justifyContent: "center", paddingBottom: "50px" }}>
+      <Col xs={4} md={2} className="tech-icons">
+        <div className="tech-icon-name">
+          <BsCursor />
+          <p>Cursor AI</p>
+        </div>
+      </Col>
       <Col xs={4} md={2} className="tech-icons">
         <div className="tech-icon-name">
           <SiWindowsterminal />

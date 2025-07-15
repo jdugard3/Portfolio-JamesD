@@ -11,9 +11,9 @@ function AboutCard() {
             Hi Everyone, I am <span className="purple">James Dugard </span>
             from <span className="purple">Miami, FL.</span>
             <br />
-            I am currently searching for a job in the field of software development.
+            I am currently searching roles in the field of software development.
             <br />
-            I have completed a Full Stack Development Bootcamp at 4Geeks Academy.
+            I have over 1 year of experience in Full Stack Development.
             <br />
             <br />
             Apart from coding, some other activities that I love to do!
