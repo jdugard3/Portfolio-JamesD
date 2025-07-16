@@ -538,6 +538,54 @@ button:focus {
   padding-top: 10px !important;
 }
 
+/* Mobile responsive styles for projects */
+@media (max-width: 767px) {
+  .project-section {
+    padding-top: 130px !important;
+    padding-bottom: 20px !important;
+  }
+  
+  .project-card {
+    padding-top: 20px !important;
+    padding-bottom: 20px !important;
+    padding-left: 15px !important;
+    padding-right: 15px !important;
+  }
+  
+  .project-heading {
+    font-size: 1.8em !important;
+    padding-top: 5px !important;
+  }
+  
+  /* Ensure proper container padding on mobile */
+  .project-section .container {
+    padding-left: 15px !important;
+    padding-right: 15px !important;
+  }
+  
+  /* Adjust card content spacing */
+  .project-card-view .card-body {
+    padding: 15px !important;
+  }
+  
+  /* Improve button spacing on mobile */
+  .project-card-view .btn {
+    margin-bottom: 8px !important;
+    font-size: 0.9em !important;
+  }
+  
+  /* Adjust row spacing on mobile */
+  .projects-row {
+    margin-left: -10px !important;
+    margin-right: -10px !important;
+  }
+  
+  .projects-row .project-card {
+    padding-left: 10px !important;
+    padding-right: 10px !important;
+  }
+}
+
 /* --------- */
 /* About */
 /* --------- */

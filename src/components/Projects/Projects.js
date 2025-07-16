@@ -24,7 +24,7 @@ function Projects() {
         <p style={{ color: "white" }}>
           Check out some of my recent projects on GitHub.
         </p>
-        <Row style={{ justifyContent: "center", paddingBottom: "10px" }}>
+        <Row style={{ justifyContent: "center", paddingBottom: "10px" }} className="projects-row">
           {/* <Col md={4} className="project-card">
             <ProjectCard
               imgPath={editor}

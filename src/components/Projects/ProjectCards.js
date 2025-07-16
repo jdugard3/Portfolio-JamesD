@@ -27,7 +27,7 @@ function ProjectCards(props) {
       )}
       <Card.Body>
         <Card.Title>{props.title}</Card.Title>
-        <Card.Text style={{ textAlign: "justify" }}>
+        <Card.Text style={{ textAlign: "center" }}>
           {props.description}
         </Card.Text>
         {props.ghLink && (
